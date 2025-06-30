@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    font-family: 'Chivo', serif;
+    background: linear-gradient(to bottom, #0D0D67, #1F7EA1);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.form-box {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    width: 300px;
+    height: 250px;
+    backdrop-filter: blur(10px);
+    transition: height 0.5s ease;
+}
+
+.form-box.signup-mode {
+    height: 350px;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.form input,
+.form select {
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    width: 240px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.form input:focus,
+.form select:focus{
+    border-color: black;
+    outline: none;
+    box-shadow: 0 0 10px #0D0D67;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.form input::placeholder {
+    color: #ffffff; 
+    opacity: 1;   
+}
+
+
+button {
+    width: 70px;
+    padding: 7px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    border-color: white;
+}
+
+button:hover {
+    box-shadow: 0 0 10px #0D0D67; /* Inner glow shadow */
+    background: rgba(255, 255, 255, 0.15); /* Optional: slightly brighter background */
+    transition: all 0.3s ease; /* Smooth animation */
+}
+
+.switch {
+    text-align: center;
+    margin-top: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+.switch:hover{
+    color: black;
+}
+
+.hidden {
+    display: none;
+}

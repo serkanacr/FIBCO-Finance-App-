@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Chivo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cambo&display=swap" rel="stylesheet">
+    <title>FIBCO</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">FIBCO</div>
+        <nav class="nav">
+            <a href="#" class="about" > ABOUT</a>
+            <a href="/templates/login.html" class="login-btn"> LOG IN</a>
+            <a href="/templates/login.html" class="signup-btn">SIGN UP</a>
+        </nav>
+    </header>
+
+    <section class="welcome-section">
+        <h1><span class="text-animate delay-1">WELCOME</span> <span class="text-animate delay-2">TO</span> <span class="text-animate delay-3">FIBCO</span></h1>
+        <p><span class="text-animate delay-4">Your finances,</span> <span class="text-animate delay-5">simplified.</span></p>
+        <p><span class="text-animate delay-6">Get insights,</span> <span class="text-animate delay-7">track spending,</span></p>
+        <p><span class="text-animate delay-8">and take control of your</span> <span class="text-animate delay-9">money.</span></p>
+
+        <div class="bar-chart">
+            <div class="bar delay-bar-1"></div>
+            <div class="bar delay-bar-2"></div>
+            <div class="bar delay-bar-3"></div>
+            <div class="bar delay-bar-4"></div>
+            <div class="bar delay-bar-5"></div>
+            <div class="bar delay-bar-6"></div>
+            <div class="bar delay-bar-7"></div>
+        </div>
+    </section>
+
+    <section class="finance-section">
+    <div class="finance-text">
+        <h1 class="slide-up">Take Control of Your Financial Status</h1>
+        <h2 class="slide-up">Track your spending, monitor your income, <br>and make smarter financial decisions with ease.</h2>
+    </div>
+
+    <div class="glass-card">
+        <h2 class="card-title">TOTAL BALANCE</h2>
+        <p class="balance">$6,108</p>
+        <p class="comparison"><span class="up-arrow">↑</span> $532 This Month</p>
+
+        <div class="transactions">
+            <!-- Latest transaction: always visible -->
+            <div class="transaction active show">
+                <span class="icon">💳</span>
+                <div>
+                    <p>SALARY</p>
+                    <small>Today, 13:47</small>
+                </div>
+                <span class="amount positive">+$3,243</span>
+            </div>
+
+            <!-- Older transactions: initially hidden -->
+            <div class="transaction hidden">
+                <span class="icon">🛒</span>
+                <div>
+                    <p>Shopping</p>
+                    <small>Yesterday, 16:30</small>
+                </div>
+                <span class="amount negative">- $120</span>
+            </div>
+
+            <div class="transaction hidden">
+                <span class="icon">🍔</span>
+                <div>
+                    <p>Food</p>
+                    <small>Yesterday, 12:15</small>
+                </div>
+                <span class="amount negative">- $45</span>
+            </div>
+
+            <div class="transaction hidden">
+                <span class="icon">💡</span>
+                 <div>
+                     <p>Electricity Bill</p>
+                     <small>June 9, 14:00</small>
+                 </div>
+            <span class="amount negative">- $75</span>
+            </div>
+
+            <div class="transaction hidden">
+                <span class="icon">🚗</span>
+                <div>
+                    <p>Transport</p>
+                    <small>June 9, 09:45</small>
+                </div>
+                <span class="amount negative">- $20</span>
+            </div>
+
+            <div class="transaction hidden">
+                <span class="icon">💼</span>
+                <div>
+                    <p>Freelance Payment</p>
+                    <small>June 8, 18:00</small>
+                </div>
+                <span class="amount positive">+ $500</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="analytics-section">
+        <div class="analytics-text">
+            <h1 class="slide-up">Visualize Your Spending Patterns</h1>
+            <h2 class="slide-up">Get detailed insights into where your money goes with interactive charts and analytics.</h2>
+            <p class="slide-up">Track your expenses across different categories and identify areas where you can optimize your spending. Our advanced analytics help you make informed financial decisions.</p>
+        </div>
+
+        <div class="chart-container">
+            <div class="chart-box slide-up">
+                <div class="chart-title">Expense Breakdown</div>
+                <div class="donut-chart">
+                    <svg viewBox="0 0 200 200">
+                        <circle class="donut-segment" cx="100" cy="100" r="75"></circle>
+                        <circle class="donut-segment" cx="100" cy="100" r="75"></circle>
+                        <circle class="donut-segment" cx="100" cy="100" r="75"></circle>
+                        <circle class="donut-segment" cx="100" cy="100" r="75"></circle>
+                        <circle class="donut-segment" cx="100" cy="100" r="75"></circle>
+                    </svg>
+                    <div class="chart-center">
+                        <div class="total">$2,850</div>
+                        <div class="label">Total Spent</div>
+                    </div>
+                </div>
+                <div class="chart-legend">
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #0D0D67;"></div>
+                        <span>Food & Dining</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #1F7EA1;"></div>
+                        <span>Transportation</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #4CAF50;"></div>
+                        <span>Shopping</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #FF9800;"></div>
+                        <span>Utilities</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #E91E63;"></div>
+                        <span>Entertainment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="crypto-section">
+        <div class="floating-coins">
+            <div class="coin"></div>
+            <div class="coin"></div>
+            <div class="coin"></div>
+            <div class="coin"></div>
+        </div>
+        
+        <div class="container">
+            <div class="content">
+                <h2>Instant Crypto Monitoring</h2>
+                <p>Stay ahead of the market with real-time cryptocurrency tracking. Monitor price movements, analyze trends, and make informed decisions with our advanced monitoring dashboard.</p>
+                
+                <ul class="features">
+                    <li>Real-time price updates across 1000+ cryptocurrencies</li>
+                    <li>Advanced charting and technical analysis tools</li>
+                    <li>Custom alerts for price movements and volume spikes</li>
+                    <li>Portfolio tracking with performance analytics</li>
+                </ul>
+                
+            </div>
+            
+            <div class="graphic-container">
+                <div class="crypto-monitor">
+                    <div class="monitor-screen">
+                        <div class="crypto-grid">
+                            <div class="crypto-card">
+                                <div class="crypto-symbol">BTC</div>
+                                <div class="crypto-price">$43,250</div>
+                                <div class="crypto-change positive">+2.4%</div>
+                            </div>
+                            <div class="crypto-card">
+                                <div class="crypto-symbol">ETH</div>
+                                <div class="crypto-price">$2,680</div>
+                                <div class="crypto-change positive">+1.8%</div>
+                            </div>
+                            <div class="crypto-card">
+                                <div class="crypto-symbol">ADA</div>
+                                <div class="crypto-price">$0.48</div>
+                                <div class="crypto-change negative">-0.9%</div>
+                            </div>
+                            <div class="crypto-card">
+                                <div class="crypto-symbol">SOL</div>
+                                <div class="crypto-price">$98.40</div>
+                                <div class="crypto-change positive">+3.2%</div>
+                            </div>
+                        </div>
+                        
+                        <svg class="price-chart" viewBox="0 0 200 40">
+                            <path class="chart-line" d="M10,30 Q50,10 100,20 T190,15"/>
+                        </svg>
+                    </div>
+                    <div class="monitor-base"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="summaries-section">
+        
+        <div class="sumcontainer">
+            <div class="sumcontent">
+                <h2>Smart Financial Reports</h2>
+                <p>Transform your financial data into actionable insights with comprehensive reports, subscription management, and intelligent spending analysis tailored to your needs.</p>
+                
+                <ul class="sumfeatures">
+                    <li>Monthly & weekly summaries with visual comparisons</li>
+                    <li>Advanced analytics comparing current vs previous periods</li>
+                    <li>Custom PDF reports for any time period you choose</li>
+                    <li>Subscription tracking with renewal alerts and suggestions</li>
+                    <li>Smart recommendations to optimize unused services</li>
+                </ul>
+                
+            </div>
+            
+            <div class="graphic-container">
+                <div class="reports-dashboard">
+                    <div class="dashboard-screen">
+                        <div class="dashboard-content">
+                            <div class="dashboard-header">
+                                <div class="dashboard-title">Financial Summary</div>
+                                <div class="dashboard-date">June 2025</div>
+                            </div>
+                            
+                            <div class="charts-grid">
+                                <div class="chart-card">
+                                    <div class="chart-title">Monthly Spending</div>
+                                    <div class="chart-value">$2,840</div>
+                                    <div class="chart-change negative">-12% vs May</div>
+                                    <svg class="mini-chart" viewBox="0 0 40 20">
+                                        <path class="chart-line" d="M2,15 Q10,8 20,12 T38,6"/>
+                                    </svg>
+                                </div>
+                                
+                                <div class="chart-card">
+                                    <div class="chart-title">Subscriptions</div>
+                                    <div class="chart-value">$347</div>
+                                    <div class="chart-change positive">3 unused</div>
+                                    <svg class="mini-chart" viewBox="0 0 40 20">
+                                        <path class="chart-line" d="M2,18 Q15,14 20,10 T38,8"/>
+                                    </svg>
+                                </div>
+                                
+                                <div class="chart-card">
+                                    <div class="chart-title">Savings Rate</div>
+                                    <div class="chart-value">23.4%</div>
+                                    <div class="chart-change positive">+5.2% vs May</div>
+                                    <svg class="mini-chart" viewBox="0 0 40 20">
+                                        <path class="chart-line" d="M2,16 Q12,12 25,8 T38,4"/>
+                                    </svg>
+                                </div>
+                                
+                                <div class="chart-card">
+                                    <div class="chart-title">Category Top</div>
+                                    <div class="chart-value">Food</div>
+                                    <div class="chart-change negative">$680 (+8%)</div>
+                                    <svg class="mini-chart" viewBox="0 0 40 20">
+                                        <path class="chart-line" d="M2,10 Q18,6 25,14 T38,12"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            
+                            <div class="dashboard-footer">
+                                <div class="subscription-alerts">
+                                    <div class="alert-dot warning" title="Netflix renewal soon"></div>
+                                    <div class="alert-dot danger" title="Unused Spotify Premium"></div>
+                                    <div class="alert-dot info" title="Adobe subscription up for review"></div>
+                                </div>
+                                <div class="report-status">PDF ready • Last updated 2min ago</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard-base">
+                        <div class="base-indicator"></div>
+                        <div class="base-indicator"></div>
+                        <div class="base-indicator"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script src="/script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/dashboard.css">
+</head>
+<body>
+    <div class="overlay" id="overlay"></div>
+
+    
+    <div class="dashboard-container">
+        <div class="header">
+            <div class="header-content">
+                <h1>Finance Dashboard</h1>
+                <p>Welcome back! Start by adding your first transaction</p>
+            </div>
+            
+            <div class="header-controls">
+                <div class="hamburger-menu">
+                    <button class="hamburger-btn" id="hamburgerBtn">
+                        <div class="hamburger-line"></div>
+                        <div class="hamburger-line"></div>
+                        <div class="hamburger-line"></div>
+                    </button>
+                    
+                    <nav class="nav-menu" id="navMenu">
+                        <a href="#" class="nav-item active" data-page="dashboard">
+                            <span class="nav-icon">🏠</span>
+                            <span>Dashboard</span>
+                        </a>
+                        <a href="#" class="nav-item" data-page="add-transaction">
+                            <span class="nav-icon">💰</span>
+                            <span>Add Transaction</span>
+                        </a>
+                        <a href="#" class="nav-item" data-page="analytics">
+                            <span class="nav-icon">📊</span>
+                            <span>Spending Analytics</span>
+                        </a>
+                        <a href="#" class="nav-item" data-page="crypto">
+                            <span class="nav-icon">₿</span>
+                            <span>Instant Crypto Monitoring</span>
+                        </a>
+                    </nav>
+                </div>
+
+
+                <div class="profile-menu">
+                    <button class="profile-btn" id="profileBtn">
+                        👤
+                    </button>
+                    
+                    <div class="profile-dropdown" id="profileDropdown">
+                        <a href="#" class="profile-item" data-action="profile">
+                            <span class="profile-icon">👤</span>
+                            <span>Profile</span>
+                        </a>
+                        <a href="#" class="profile-item" data-action="settings">
+                            <span class="profile-icon">⚙️</span>
+                            <span>Settings</span>
+                        </a>
+                        <a href="#" class="profile-item logout" data-action="logout">
+                            <span class="profile-icon">🚪</span>
+                            <span>Log Out</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Balance Card -->
+        <div class="glass-card balance-card">
+            <div class="balance-label">Total Balance</div>
+            <div class="balance-amount" id="totalBalance">$0.00</div>
+            <div class="balance-change" id="balanceChange" style="display: none;">↗ +$0.00 this month</div>
+        </div>
+
+        <div class="stats-grid">
+            <!-- Recent Transactions -->
+            <div class="glass-card">
+                <h2 class="section-title">
+                    💳 Recent Transactions
+                </h2>
+                <div class="transactions-list" id="transactionsList">
+                    <div class="empty-state">
+                        <div class="empty-state-icon">📝</div>
+                        <h3>No Transactions Yet</h3>
+                        <p>Start tracking your finances by adding your first transaction. It could be income, expenses, or transfers.</p>
+                        <a href="#" class="cta-button" onclick="navigateToPage('add-transaction')">Add First Transaction</a>
+                    </div>
+                </div>
+                <button class="view-all-btn" onclick="viewAllTransactions()" style="display: none;" id="viewAllBtn">View All Transactions</button>
+            </div>
+
+            <!-- Expense Breakdown -->
+            <div class="glass-card">
+                <h2 class="section-title">
+                    📊 Expense Breakdown
+                </h2>
+                <div class="chart-container" id="chartContainer">
+                    <div class="empty-state">
+                        <div class="empty-state-icon">📈</div>
+                        <h3>No Expense Data</h3>
+                        <p>Once you add some transactions, we'll show you a beautiful breakdown of your spending categories.</p>
+                        <a href="#" class="cta-button" onclick="navigateToPage('add-transaction')">Add Transactions</a>
+                    </div>
+                    <canvas id="expenseChart" style="display: none;"></canvas>
+                </div>
+            </div>
+
+            <!-- Upcoming Payments -->
+            <div class="glass-card">
+                <h2 class="section-title">
+                    📅 Upcoming Payments
+                </h2>
+                <div class="upcoming-payments" id="upcomingPayments">
+                    <div class="empty-state">
+                        <div class="empty-state-icon">⏰</div>
+                        <h3>No Scheduled Payments</h3>
+                        <p>Set up recurring payments and reminders to never miss a bill again.</p>
+                        <a href="#" class="cta-button" onclick="navigateToPage('add-transaction')">Schedule Payments</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="/script/dashboard.js"></script>
+</body>
+</html>
